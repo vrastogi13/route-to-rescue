@@ -38,7 +38,7 @@ class App extends Component {
           </header>
             <hr className="line"/>
           <div>
-              <button onClick={this.showMainComp} type="submit" className="loginbutton">Next</button>
+              <button onClick={this.showMainComp} className="return-button">Return To Missing Page</button>
             </div>
         </div>
       </form>
@@ -137,7 +137,7 @@ class App extends Component {
                 <li>Match in Missing Person Report: Yes</li>
                 <li>Date Reported Missing: Feb 10, 2020</li>
               </ul> 
-              <button onClick={this.showMainComp} className="button">Return To Missing Page</button>
+              <button onClick={this.showMainComp} className="button">View Heat Map</button>
             </div>         
           </div>
         </div>
