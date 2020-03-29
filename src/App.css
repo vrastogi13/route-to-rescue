@@ -14,7 +14,7 @@
 }
 
 .container {
-  background-color: #282c34;
+  background-color: rgba(255, 255, 255, 0.911);
 }
 .App-header {
   background-color: #282c34;
@@ -46,13 +46,28 @@ border: 3px solid #4CAF50;
  
 }
 
+.line{
+    color: #ff0000;
+    height: 2;
+}
 .header{
   text-align: center;
-  font-size: 36px;
+  font-size: 40px;
 	line-height: 40px;
 	margin: 1em 0 .6em 0;
 	font-weight: normal;
-	color: white;
+	color: black;
+	font-family: 'Hammersmith One', sans-serif;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+	position: relative;
+}
+.header2{
+  text-align: center;
+  font-size: 20px;
+	line-height: 30px;
+	margin: 1em 0 .6em 0;
+	font-weight: normal;
+	color: black;
 	font-family: 'Hammersmith One', sans-serif;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
 	position: relative;
@@ -73,7 +88,7 @@ border: 3px solid #4CAF50;
 }​
 ul.a {
   list-style-type: circle;
- }
+   }
 .App-link {
   color: #61dafb;
 }
@@ -81,10 +96,16 @@ ul.a {
   box-sizing: border-box;
 }
 .box {
-  color: white;
+  color: black;
   float: left;
-  width: 50%;
+  width: 33%;
   padding: 50px;
+  font-size:20px;
+}
+.icon{
+  float: left;;
+  width: 2px;
+  height: 2px;
 }
 .box img{
   width: 100%;
