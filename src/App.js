@@ -14,7 +14,7 @@ class App extends Component {
           Route to Rescue
         </header>
         <header className="header2">
-          Providing Rescue and helping lawmakers catch preprators
+          Empowering Community to Catch Criminals 
         </header>
         <hr className="line"/>
         <div className="clearfix">
