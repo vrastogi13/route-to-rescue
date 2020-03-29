@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/route-to-rescue/static/css/main.481400a2.chunk.css",
-    "main.js": "/route-to-rescue/static/js/main.d76481f5.chunk.js",
-    "main.js.map": "/route-to-rescue/static/js/main.d76481f5.chunk.js.map",
+    "main.css": "/route-to-rescue/static/css/main.4410e068.chunk.css",
+    "main.js": "/route-to-rescue/static/js/main.a3f9162c.chunk.js",
+    "main.js.map": "/route-to-rescue/static/js/main.a3f9162c.chunk.js.map",
     "runtime-main.js": "/route-to-rescue/static/js/runtime-main.3a50ac84.js",
     "runtime-main.js.map": "/route-to-rescue/static/js/runtime-main.3a50ac84.js.map",
-    "static/js/2.8d1581a9.chunk.js": "/route-to-rescue/static/js/2.8d1581a9.chunk.js",
-    "static/js/2.8d1581a9.chunk.js.map": "/route-to-rescue/static/js/2.8d1581a9.chunk.js.map",
+    "static/css/2.b4a16772.chunk.css": "/route-to-rescue/static/css/2.b4a16772.chunk.css",
+    "static/js/2.59153257.chunk.js": "/route-to-rescue/static/js/2.59153257.chunk.js",
+    "static/js/2.59153257.chunk.js.map": "/route-to-rescue/static/js/2.59153257.chunk.js.map",
     "index.html": "/route-to-rescue/index.html",
-    "precache-manifest.77c80aade3300e182092f63d4cac5279.js": "/route-to-rescue/precache-manifest.77c80aade3300e182092f63d4cac5279.js",
+    "precache-manifest.df5065a1dfbea012e0d884c72ce20a32.js": "/route-to-rescue/precache-manifest.df5065a1dfbea012e0d884c72ce20a32.js",
     "service-worker.js": "/route-to-rescue/service-worker.js",
-    "static/css/main.481400a2.chunk.css.map": "/route-to-rescue/static/css/main.481400a2.chunk.css.map",
-    "static/js/2.8d1581a9.chunk.js.LICENSE.txt": "/route-to-rescue/static/js/2.8d1581a9.chunk.js.LICENSE.txt",
+    "static/css/2.b4a16772.chunk.css.map": "/route-to-rescue/static/css/2.b4a16772.chunk.css.map",
+    "static/css/main.4410e068.chunk.css.map": "/route-to-rescue/static/css/main.4410e068.chunk.css.map",
+    "static/js/2.59153257.chunk.js.LICENSE.txt": "/route-to-rescue/static/js/2.59153257.chunk.js.LICENSE.txt",
     "static/media/images.jpeg": "/route-to-rescue/static/media/images.c066483d.jpeg",
-    "static/media/kidnaping.jpg": "/route-to-rescue/static/media/kidnaping.ee221621.jpg"
+    "static/media/kidnaping.jpg": "/route-to-rescue/static/media/kidnaping.ee221621.jpg",
+    "static/media/location_icon.webp": "/route-to-rescue/static/media/location_icon.0b5644ab.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.3a50ac84.js",
-    "static/js/2.8d1581a9.chunk.js",
-    "static/css/main.481400a2.chunk.css",
-    "static/js/main.d76481f5.chunk.js"
+    "static/css/2.b4a16772.chunk.css",
+    "static/js/2.59153257.chunk.js",
+    "static/css/main.4410e068.chunk.css",
+    "static/js/main.a3f9162c.chunk.js"
   ]
 }
