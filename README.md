@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Route to Rescue
+## Background
+There are massive data streams out there in the whole internet, each with valuable information attached to it. What if a photo of a girl leaned against house no. 123 with shade of street name X , might actually be a victim of human trafficking and with timely manner action, this photo can be a survival point. Traditionally, with manual investigation, it takes weeks to find the location of photo based on the texts and more importantly it needs exhaustive search to find the identity of the victim as photoed. with the emerge of social media and Hashtag, everybody posts photos anywhere and tag it with any desirable Hashtag. with those Hashtags refering to a criminal case, there is a need for an AI tool which can parse a tagged photo and detect a face, a car and/or location. What we deploy helps law enforcement, government and the private sector identify and combat criminal activities in a matter of seconds compared to days. Tag the photo with #RouteToRescue and our tool will do its job. 
 
-## Available Scripts
+## Architecture Diagram
+![](https://raw.githubusercontent.com/ashwiniverma/NonProfitCompassion/master/architecture.png)
 
-In the project directory, you can run:
+## Deployment Pre-requisites
+- Create IAM roles
+  - Lambda: access to Alexa, Translate, Polly, and DynamoDB
+  - EC2: access to SNS API
+- [Setup the AWS CLI - Install and Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
+- [Alexa Skills Kit Quick Start - Steps 1, 2, and 3](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html)
 
-### `yarn start`
+## Deployment Procedure
+- Deploy the integration service
+```bash
+cd interaction-service
+ask deploy
+```
+- Attach the IAM role to the Lambda.
+- Deploy the moderation service. This can be done by building and deploying a Docker container (see `moderation-service/Dockerfile`) or by running the equivalent commands on an EC2 instance.
+- Attach the IAM role to the instance.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Our approach to the judging citeria
+### Social Impact & Value
+This Alexa Skill has a large potential social impact, as it can assist in Compassion's goal of rescuing its current 2 million sponsored children out of poverty. Increasing and modernizing should drive sponsorship growth (which ultimately means more children are lifted out of poverty).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Originality
+While other translation skills/apps exist for near-real time translation, this app has the unique value-add of protecting these children through moderation of the communication. A moderation webservice filters out harmful words and phrases before the message is delivered to the child. If certain thresholds are crossed, communication is ended and the moderation team is notified to review.
 
-### `yarn test`
+### Feasibility
+What we have created is MVP at best. We have made signifcant comprimises in order to meet the challenge's acceptance criteria and the hackathon's judging criteria. That being said, due to our heavy use of AWS hosted services, we believe what we started here should be able to be built on for a production launch in 12-18 months. The hackathon team has created this [notes document](./NOTES.md) for the next development team that picks this up.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usability
+We make heave use of the Alexa Skills Kit's ability to prompt the user for appropriate actions. The minimum flows we specced based on accpetance criteria are all accounted for. As you would expect for an app developed in this timeframe, more work is needed additional conversational flows to make it feel even more natural.
 
-### `yarn build`
+### Engagement
+The product encourages re-engagment by being easy to use and a much faster (relative to the historic pen-pal methods) interaction between sponsor and child.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Go-To-Market Strategy & Promotion
+We recommend a phased rollout.
+- Start with a single partner church that has a small number of children and a high tolerance for working through issues. We recommend the development team take in bugs and feature requests in an agile fashion.
+- Roll out to the remainder of that partner church's country/language before tackling other countries/languages
+- Rollout to new languages one at a time, addressing feedback as it comes up.
