@@ -5,6 +5,14 @@ import kidnaping from './kidnaping.jpg';
 import React, { Component } from 'react';
 import './App.css';
 import { Chart } from "react-google-charts";
+import HeatMap from "./HeatMap.js"; 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 class App extends Component {
   constructor () {
     super()
@@ -19,7 +27,8 @@ class App extends Component {
   }
   render () {
     return (
-      <div className="container">       
+      <Router> 
+      <div className="container">    
         <div className="goRight">
           <a href="https://www.fbi.gov/wanted/kidnap" target="_blank">FBI Report Missing Persons</a>
         </div>
@@ -28,6 +37,10 @@ class App extends Component {
           <a href="https://www.interpol.int/en/How-we-work/Notices/View-Yellow-Notices" target="_blank">Interpol Report Missing Persons</a>
         </div>
         <br/>  
+        <div>
+            <Link to="./HeatMap.js" className="btn btn-primary">HeatMap</Link>
+            <Route exact path="/HeatMap.js" component={HeatMap} />
+         </div>
         <header className="header">
           Route to Rescue
         </header>        
@@ -74,7 +87,8 @@ class App extends Component {
           </div>
           <div className="box">
             <ul className="a">
-              <li>Probability: 90%</li>
+              <li>Case: 110</li>
+              <li>Probability of Trafficking: 90%</li>
               <li>Face Match from other Reportings: 8</li>
               <li>Last 5 Locations Reported:</li>
               <ul className="a">
@@ -124,21 +138,22 @@ class App extends Component {
           </div>
           <div className="box">
             <ul className="a">
-              <li>Probability: 49%</li>
+              <li>Case: 100</li>
+              <li>Probability of Trafficking: 49%</li>
               <li>Face Match from other Reportings: 3</li>
               <li>Last 5 Locations Reported:</li>
               <ul className="a">
                 <li>Kolkata, India</li>
-                <li>San diego, USA</li>
+                <li>San Diego, USA</li>
               </ul>  
               <li>Match in Missing Person Report: Yes</li>
               <li>Date Reported Missing: Feb 10, 2020</li>
             </ul>  
           </div>         
-        </div>
-        
+        </div>    
         
       </div>
+      </Router> 
     );
   }
 }; 
@@ -174,17 +189,18 @@ const Child = () => (
             textStyle : {
                 fontSize: 20 // or the number you want
             }          
-          }
+          } 
         }}
         />
     </div>
     <div className="box">
       <ul className="a">
-        <li>Probability: 79%</li>
+        <li>Case: 120</li>
+        <li>Probability of Trafficking: 92%</li>
         <li>Face Match from other Reportings: 1</li>
         <li>Last 5 Locations Reported:</li>
         <ul className="a">
-          <li>Bishkek, Kyrgyzstan</li>
+          <li>London, UK</li>
         </ul>  
         <li>Match in Missing Person Report: Yes</li>
         <li>Date Reported Missing: Mar 29, 2020</li>
