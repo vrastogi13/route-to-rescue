@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/vrastogi13/route-to-rescue/static/css/main.79f9b954.chunk.css",
-    "main.js": "/vrastogi13/route-to-rescue/static/js/main.fdcd6db0.chunk.js",
-    "main.js.map": "/vrastogi13/route-to-rescue/static/js/main.fdcd6db0.chunk.js.map",
-    "runtime-main.js": "/vrastogi13/route-to-rescue/static/js/runtime-main.1ede0a37.js",
-    "runtime-main.js.map": "/vrastogi13/route-to-rescue/static/js/runtime-main.1ede0a37.js.map",
-    "static/js/2.31f0b896.chunk.js": "/vrastogi13/route-to-rescue/static/js/2.31f0b896.chunk.js",
-    "static/js/2.31f0b896.chunk.js.map": "/vrastogi13/route-to-rescue/static/js/2.31f0b896.chunk.js.map",
-    "index.html": "/vrastogi13/route-to-rescue/index.html",
-    "precache-manifest.1cf76fd5a593c1c56e4f29db59650b6f.js": "/vrastogi13/route-to-rescue/precache-manifest.1cf76fd5a593c1c56e4f29db59650b6f.js",
-    "service-worker.js": "/vrastogi13/route-to-rescue/service-worker.js",
-    "static/css/main.79f9b954.chunk.css.map": "/vrastogi13/route-to-rescue/static/css/main.79f9b954.chunk.css.map",
-    "static/js/2.31f0b896.chunk.js.LICENSE.txt": "/vrastogi13/route-to-rescue/static/js/2.31f0b896.chunk.js.LICENSE.txt",
-    "static/media/images.jpeg": "/vrastogi13/route-to-rescue/static/media/images.c066483d.jpeg",
-    "static/media/location_icon.png": "/vrastogi13/route-to-rescue/static/media/location_icon.b933abac.png"
+    "main.css": "/route-to-rescue/static/css/main.79f9b954.chunk.css",
+    "main.js": "/route-to-rescue/static/js/main.a1ddc329.chunk.js",
+    "main.js.map": "/route-to-rescue/static/js/main.a1ddc329.chunk.js.map",
+    "runtime-main.js": "/route-to-rescue/static/js/runtime-main.3a50ac84.js",
+    "runtime-main.js.map": "/route-to-rescue/static/js/runtime-main.3a50ac84.js.map",
+    "static/js/2.31f0b896.chunk.js": "/route-to-rescue/static/js/2.31f0b896.chunk.js",
+    "static/js/2.31f0b896.chunk.js.map": "/route-to-rescue/static/js/2.31f0b896.chunk.js.map",
+    "index.html": "/route-to-rescue/index.html",
+    "precache-manifest.8da543e58760eb65f6edf05de9b85d77.js": "/route-to-rescue/precache-manifest.8da543e58760eb65f6edf05de9b85d77.js",
+    "service-worker.js": "/route-to-rescue/service-worker.js",
+    "static/css/main.79f9b954.chunk.css.map": "/route-to-rescue/static/css/main.79f9b954.chunk.css.map",
+    "static/js/2.31f0b896.chunk.js.LICENSE.txt": "/route-to-rescue/static/js/2.31f0b896.chunk.js.LICENSE.txt",
+    "static/media/images.jpeg": "/route-to-rescue/static/media/images.c066483d.jpeg",
+    "static/media/location_icon.png": "/route-to-rescue/static/media/location_icon.b933abac.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1ede0a37.js",
+    "static/js/runtime-main.3a50ac84.js",
     "static/js/2.31f0b896.chunk.js",
     "static/css/main.79f9b954.chunk.css",
-    "static/js/main.fdcd6db0.chunk.js"
+    "static/js/main.a1ddc329.chunk.js"
   ]
 }
