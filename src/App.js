@@ -1,22 +1,44 @@
 
 import image1 from './images.jpeg';
 import image2 from './image1.jpeg';
-import locationIcon from './location_icon.png'
+import kidnaping from './kidnaping.jpg';
 import React, { Component } from 'react';
 import './App.css';
-import { render } from "react-dom";
 import { Chart } from "react-google-charts";
 class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      isHidden: true
+    }
+  }
+  toggleHidden () {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+  }
   render () {
     return (
-      <div className="container">
+      <div className="container">       
+        <div className="goRight">
+          <a href="https://www.fbi.gov/wanted/kidnap" target="_blank">FBI Report Missing Persons</a>
+        </div>
+        <br/>
+        <div className="goRight">
+          <a href="https://www.interpol.int/en/How-we-work/Notices/View-Yellow-Notices" target="_blank">Interpol Report Missing Persons</a>
+        </div>
+        <br/>  
         <header className="header">
           Route to Rescue
-        </header>
+        </header>        
         <header className="header2">
-          Providing Rescue and helping lawmakers catch preprators
-        </header>
+          Empowering Community to Prevent Human Trafficking          
+        </header>       
         <hr className="line"/>
+        <button onClick={this.toggleHidden.bind(this)} >
+          Refresh Tweets
+        </button>
+        {!this.state.isHidden && <Child />}
         <div className="clearfix">
           <div className="box">
             <picture>
@@ -37,9 +59,16 @@ class App extends Component {
                 ['Shock',75],
               ]}
               options={{
-                // Material design options
                 title: "Emotion Analysis",
-                //backgroundColor:'#282c34'
+                titleTextStyle: {
+                  fontSize: 20, // 12, 18 whatever you want (don't specify px)
+                  bold: true,   
+                },
+                vAxis : { 
+                  textStyle : {
+                      fontSize: 20 // or the number you want
+                  }          
+                }
               }}
               />
           </div>
@@ -76,19 +105,26 @@ class App extends Component {
                 ['Emotion', '%'],
                 ['Happy', 7],
                 ['Sad', 90],
-                ['Fear', 40],
-                ['Shock',36],
+                ['Fear', 20],
+                ['Shock',26],
               ]}
               options={{
-                // Material design options
                 title: "Emotion Analysis",
-                //backgroundColor:'#282c34'
+                titleTextStyle: {
+                  fontSize: 20, // 12, 18 whatever you want (don't specify px)
+                  bold: true,   
+                },
+                vAxis : { 
+                  textStyle : {
+                      fontSize: 20 // or the number you want
+                  }          
+                }
               }}
               />
           </div>
           <div className="box">
             <ul className="a">
-              <li>Probability: 79%</li>
+              <li>Probability: 49%</li>
               <li>Face Match from other Reportings: 3</li>
               <li>Last 5 Locations Reported:</li>
               <ul className="a">
@@ -106,4 +142,57 @@ class App extends Component {
     );
   }
 }; 
+
+const Child = () => (
+  <div>
+  <div className="clearfix">
+    <div className="box">
+      <picture>
+        <img src={kidnaping} alt={"image loading"} />
+      </picture>                      
+    </div>
+    <div className="box">
+      <Chart
+        //width={'600px'}
+        height={'280px'}
+        chartType="BarChart"
+        loader={<div>Loading Chart</div>}
+        data={[
+          ['Emotion', '%'],
+          ['Happy', 5],
+          ['Sad', 30],
+          ['Fear', 92],
+          ['Shock',81],
+        ]}
+        options={{
+          title: "Emotion Analysis",
+          titleTextStyle: {
+            fontSize: 20, // 12, 18 whatever you want (don't specify px)
+            bold: true,   
+          },
+          vAxis : { 
+            textStyle : {
+                fontSize: 20 // or the number you want
+            }          
+          }
+        }}
+        />
+    </div>
+    <div className="box">
+      <ul className="a">
+        <li>Probability: 79%</li>
+        <li>Face Match from other Reportings: 1</li>
+        <li>Last 5 Locations Reported:</li>
+        <ul className="a">
+          <li>Bishkek, Kyrgyzstan</li>
+        </ul>  
+        <li>Match in Missing Person Report: Yes</li>
+        <li>Date Reported Missing: Mar 29, 2020</li>
+      </ul>  
+      </div>         
+    </div>
+  <hr className="line"/>
+  </div>
+  )
+
 export default App;

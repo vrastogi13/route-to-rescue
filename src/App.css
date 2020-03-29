@@ -47,8 +47,7 @@ border: 3px solid #4CAF50;
 }
 
 .line{
-    color: #ff0000;
-    height: 2;
+  border: 3px solid red;
 }
 .header{
   text-align: center;
@@ -103,9 +102,13 @@ ul.a {
   font-size:20px;
 }
 .icon{
-  float: left;;
+  float: left;
   width: 2px;
   height: 2px;
+}
+.goRight{
+  float: right;
+  margin-right: 10px;
 }
 .box img{
   width: 100%;
